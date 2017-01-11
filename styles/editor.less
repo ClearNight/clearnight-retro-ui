@@ -15,7 +15,7 @@ atom-text-editor[mini] {
   background-color: @input-background-color;
 
   &,
-  &::shadow {
+  &.editor {
     .placeholder-text {
       color: @text-color-subtle;
     }
@@ -29,7 +29,7 @@ atom-text-editor[mini] {
   }
 
   &.is-focused,
-  &.is-focused::shadow {
+  &.is-focused.editor {
     .focus();
     background-color: @input-background-color-focus;
     .selection .region {
