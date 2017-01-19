@@ -2,10 +2,10 @@ root = document.documentElement
 
 module.exports =
   activate: (state) ->
-    atom.config.observe 'glacier-dark-ui.fontSize', (value) ->
+    atom.config.observe 'clear-night-ui.fontSize', (value) ->
       setFontSize(value)
 
-    atom.config.observe 'glacier-dark-ui.layoutMode', (value) ->
+    atom.config.observe 'clear-night-ui.layoutMode', (value) ->
       setLayoutMode(value)
 
   deactivate: ->
@@ -24,7 +24,7 @@ unsetFontSize = ->
 
 # Layout Mode -----------------------
 setLayoutMode = (layoutMode) ->
-  root.setAttribute('theme-glacier-dark-ui-layoutmode', layoutMode.toLowerCase())
+  root.setAttribute('theme-clear-night-ui-layoutmode', layoutMode.toLowerCase())
 
 unsetLayoutMode = ->
-  root.removeAttribute('theme-glacier-dark-ui-layoutmode')
+  root.removeAttribute('theme-clear-night-ui-layoutmode')
