@@ -3,7 +3,7 @@
 // ----------------------------------------------
 
 @import "syntax-variables";
-.ui-syntax-color() { @syntax-background-color: hsl(220,24%,20%); } .ui-syntax-color(); // fallback color
+.ui-syntax-color() { @syntax-background-color: hsl(205, 20%, 25%); } .ui-syntax-color(); // fallback color
 @ui-syntax-color: @syntax-background-color;
 
 // Color guards -----------------
@@ -12,7 +12,7 @@
 @ui-s-l: lightness(@ui-syntax-color);
 @ui-inv: 10%; // inverse lightness if below
 
-.ui-hue() when (@ui-s-s = 0) { @ui-hue: 220; } // Use blue hue when no saturation
+.ui-hue() when (@ui-s-s = 0) { @ui-hue: 205; } // Use blue hue when no saturation
 .ui-hue() when (@ui-s-s > 0) { @ui-hue: @ui-s-h; }
 .ui-hue();
 
@@ -102,8 +102,8 @@
 
 @tab-bar-background-color:         @level-3-color;
 @tab-bar-border-color:             @base-border-color;
-@tab-background-color:             @level-3-color;
-@tab-background-color-active:      @level-2-color;
+@tab-background-color:             @level-2-color;
+@tab-background-color-active:      @level-1-color;
 @tab-border-color:                 @base-border-color;
 
 @tree-view-background-color:       @level-3-color;
@@ -141,7 +141,7 @@
 // These variables are only used in this theme
 // ----------------------------------------------
 
-@ui-theme-name: glacier-ui;
+@ui-theme-name: clear-night-ui;
 
 // Text (Custom) -----------------
 @text-color-faded: fade(@text-color, 20%);
@@ -154,13 +154,13 @@
 
 
 // Background (Custom) -----------------
-@level-1-color: lighten(@base-background-color, 6%);
+@level-1-color: lighten(@base-background-color, 8%);
 @level-2-color: @base-background-color;
-@level-3-color: #0b1015;
+@level-3-color: #0b1017;
 
 
 // Base -----------------
-@base-accent-color: #5eebb8; //76FFCD ou 4ae3bc
+@base-accent-color: #2ABFB2; //
 
 
 // Components (Custom) -----------------
