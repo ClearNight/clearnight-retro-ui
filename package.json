@@ -1,15 +1,16 @@
 {
-  "name": "glacier-dark-ui",
+  "name": "clear-night-ui",
   "theme": "ui",
-  "version": "0.5.0",
-  "description": "Atom Glacier dark UI theme",
+  "version": "0.6.0",
+  "description": "Atom Clear Night dark UI theme",
   "keywords": [
     "dark",
     "adaptive",
-    "ui"
+    "ui",
+    "night"
   ],
   "license": "MIT",
-  "repository": "https://github.com/berlouz/glacier-dark-ui",
+  "repository": "https://github.com/raindeer44/clear-night-ui",
   "main": "lib/main",
   "engines": {
     "atom": ">0.40.0"
