@@ -1,6 +1,6 @@
 ## Clear Night UI
 
-Clear Night UI is a soothing dark theme for the Atom text editor. It is designed to work with Clear Night Syntax, but blends nicely with many other syntax themes.
+Clear Night UI is a soothing dark theme for the Atom text editor. It is designed to work with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax), but blends nicely with many other syntax themes.
 
 > Clear Night UI is based on [Glacier Dark UI](https://github.com/berlouz/glacier-dark-ui)
 
