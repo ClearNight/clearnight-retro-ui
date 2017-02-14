@@ -28,7 +28,7 @@ Switch between 3 Layout Modes:
 
 ## Preview
 
-<p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2695_md.png" /></p>
+<p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2696_md.png" /></p>
 
 Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax) and [Minimap](https://atom.io/packages/minimap).
 
