@@ -18,7 +18,7 @@ apm install clear-night-ui
   1. Open *Settings > Themes*
   2. Select `Clear Night` from the *UI Theme* drop-down menu
 
-#### Settings
+## Settings
 
 Switch between 3 Layout Modes:
 
