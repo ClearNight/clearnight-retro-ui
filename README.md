@@ -22,9 +22,9 @@ apm install clear-night-ui
 
 Switch between 3 Layout Modes:
 
-* Auto (default) - In Auto mode, the UI and font size will automatically change based on the window size.
-* Compact - In Compact mode the UI stays compact to leave more space for the editor.
-* Spacious - Expand the UI with Spacious mode to give the editor some breathing room.
+* Auto (default) - In auto mode, the UI and font size will automatically change based on the window size.
+* Compact - In compact mode the UI stays compact to leave more space for the editor.
+* Spacious - Expand the UI with spacious mode to give the editor some breathing room.
 
 ## Preview
 
