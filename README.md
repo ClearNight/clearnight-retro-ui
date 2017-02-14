@@ -28,7 +28,9 @@ Switch between 3 Layout Modes:
 
 ## Preview
 
-![clear-night-ui](https://i.imgur.com/gQjB00h.jpg)
+<p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2695_md.png" /></p>
+
+Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax) and [Minimap](https://atom.io/packages/minimap).
 
 ### Contribution
 Please report issues/bugs, feature requests and suggestions for improvements to the [issue tracker](https://github.com/raindeer44/clear-night-ui/issues).
