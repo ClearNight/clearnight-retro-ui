@@ -1,6 +1,9 @@
 h1,
 h2,
-h3 {
+h3,
+.h1,
+.h2,
+.h3 {
   line-height: 1em;
   margin-bottom: 15px
 }
@@ -22,13 +25,16 @@ pre {
   color: @text-color;
   background: @inset-panel-background-color;
   border-radius: @component-border-radius;
-  border: none;
+  border-color: @base-border-color;
   margin: 0;
 }
 
 code {
   .text(highlight);
+  padding: 2px 4px;
+  font-size: 90%;
   background: @background-color-highlight;
+  color: darken(@text-color-info, 10%);
   border-radius: @component-border-radius;
 }
 
