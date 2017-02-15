@@ -1,13 +1,12 @@
 
-// Spinner ----------------------
-
+// Spinner
 @spinner-duration: 1.2s;
 
 .loading-spinner(@size) {
   position: relative;
   display: block;
-  width: 1em;
-  height: 1em;
+  width: @size;
+  height: @size;
   font-size: @size;
   background: radial-gradient(@base-accent-color .1em, transparent .11em);
 
@@ -45,7 +44,6 @@
   100% { transform: rotateZ(360deg); }
 }
 
-// Spinner sizes
 .loading-spinner-tiny   { .loading-spinner(16px); &::before, &::after { border-width: 1px; } }
 .loading-spinner-small  { .loading-spinner(32px); }
 .loading-spinner-medium { .loading-spinner(48px); }
@@ -54,8 +52,7 @@
 
 
 
-// Progress Bar ----------------------
-
+// Progress Bar
 @progress-height: 8px;
 @progress-buffer-color: fade(@progress-background-color, 20%);
 
