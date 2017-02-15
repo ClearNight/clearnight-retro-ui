@@ -17,8 +17,6 @@
     display: none;
   }
 
-  // Tab ----------------------
-
   .tab {
     position: relative;
     top: 0;
@@ -31,12 +29,18 @@
     padding: 0;
     margin: 0;
     background-clip: content-box;
+    transition: color @transition-time ease, border @transition-time ease;
+
+    .status-added,
+    .status-ignored,
+    .status-modified {
+      transition: color @transition-time ease;
+    }
+
     &.active {
       border-radius: @component-border-radius*1.85 @component-border-radius*1.85 0 0;
       background-color: @tab-background-color-active;
     }
-
-    // Cover ----------------------
 
     &::after {
       content: "";
@@ -60,9 +64,6 @@
       transition: none;
     }
 
-
-    // Title ----------------------
-
     .title {
       position: relative;
       height: inherit;
@@ -82,9 +83,6 @@
     &.active .title {
       background-color: @tab-background-color-active;
     }
-
-
-    // Close icon ----------------------
 
     .close-icon {
       top: 0;
@@ -112,16 +110,10 @@
     }
   }
 
-
-  // Tab sizing ----------------------
-
   .tab,
   .tab.active {
     flex: 1;
   }
-
-
-  // keep tabs same size when active ----------------------
 
   .tab,
   .tab.active {
@@ -131,15 +123,10 @@
     }
   }
 
-
-  // Active ----------------------
-
   .tab.active {
     color: @tab-text-color-active;
     background-color: @level-1-color !important;
   }
-
-  // Tab seperator ----------------------
 
   .tab {
     border-width: 0 0 0 1px;
@@ -153,8 +140,6 @@
     border-image: linear-gradient(transparent, transparent) 0 0 0 1 stretch;
   }
 
-
-  // Modified ----------------------
   .tab.modified {
     .close-icon {
       color: @text-color-info;
@@ -176,9 +161,6 @@
       }
     }
   }
-
-
-  // Dragging ----------------------
 
   .tab.is-dragging {
     opacity: .5;
@@ -215,9 +197,6 @@
   }
 }
 
-
-// Active pane marker --------------
-
 .tab-bar .tab::before {
   content: "";
   position: absolute;
@@ -242,9 +221,6 @@ atom-pane.active .tab.active:before {
   opacity: 1;
   transition-duration: .32s;
 }
-
-
-// Custom tabs --------------
 
 .tab-bar .tab.active {
   &[data-type$="Editor"],
