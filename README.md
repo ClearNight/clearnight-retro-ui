@@ -1,6 +1,8 @@
 <p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2686_md.png" alt="Clear Night UI" /></p>
 
-A soothing dark theme for the Atom text editor. Designed to work with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax), but integrates nicely with other syntax themes. Inspired by [Glacier Dark UI](https://github.com/berlouz/glacier-dark-ui).
+A soothing dark theme for the Atom text editor. Designed to work with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax), but integrates nicely with other syntax themes.
+
+Clear Night was inspired by [Glacier Dark UI](https://github.com/berlouz/glacier-dark-ui) and [Nord UI](https://github.com/arcticicestudio/nord-atom-ui).
 
 ## Getting started
 ### Installation
