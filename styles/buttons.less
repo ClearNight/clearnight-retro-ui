@@ -5,11 +5,7 @@
 // Mixins -----------------------
 
 .btn-default (@color, @hover-color, @selected-color, @text-color) {
-  color: @text-color;
-  text-shadow: none;
-  border: @btn-border;
-  background-color: @color;
-  background-image: linear-gradient(lighten(@color, 2%), @color);
+    .button(@button-border-color);
 
   &:focus {
     //.focus(); // disabled for now, since :focus styles stay even after releasing mouse.
