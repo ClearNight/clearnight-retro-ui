@@ -1,6 +1,4 @@
-// Pattern matching; ish is cray.
-// http://lesscss.org/#-pattern-matching-and-guard-expressions
-
+// Text
 .text(normal) {
   font-weight: normal;
   color: @text-color;
@@ -15,6 +13,11 @@
 }
 .text(selected) {
   .text(highlight)
+}
+
+.text(heading) {
+  font-family: @font-family;
+  font-weight: 200;
 }
 
 .text(info) {
@@ -34,4 +37,88 @@
   outline: none;
   border-color: @base-accent-color;
   box-shadow: 0 0 0 1px @base-accent-color;
+}
+
+// Buttons
+.button(@color) {
+  color: @text-color;
+  font-size: 12px;
+  font-weight: 400;
+  background: transparent;
+  height: @input-height;
+  line-height: @input-height;
+  border-radius: @component-border-radius;
+  border-color: @color;
+  border-width: 1px !important;
+  border-style: solid !important;
+  box-shadow: none !important;
+  transition: all @transition-time ease;
+  padding: 0 10px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    color: @base-background-color !important;
+    background: @color !important;
+    border-color: @color !important;
+  }
+
+  &:active,
+  &:active:focus {
+    color: @base-background-color;
+    background: @color;
+    border: 1px solid @text-color-selected !important;
+  }
+
+  &.selected {
+    color: @base-background-color;
+    background: @button-background-color-selected;
+    border: 1px solid @color !important;
+
+    &:hover {
+      color: @base-background-color !important;
+      border: 1px solid @text-color-highlight !important;
+      background: @color !important;
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: 1;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: @text-color-subtle !important;
+  }
+}
+
+.button-variant(@color) {
+  .button(@color);
+  color: @color !important;
+  border-color: @color !important;
+  background: transparent;
+
+  &:hover {
+    border-color: @color !important;
+  }
+
+  &.selected {
+    color: @base-background-color !important;
+    background: @color !important;
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: 1;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: @text-color-subtle !important;
+  }
+}
+
+// Overlay
+.overlay-shadow() {
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.4) !important;
 }
