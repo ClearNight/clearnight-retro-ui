@@ -51,7 +51,6 @@
       right: 0;
       height: inherit;
       border-radius: @component-border-radius @component-border-radius 0 0;
-      //border: @tab-border;
       border-bottom-color: @tab-background-color-active;
       background-image: linear-gradient( hsla(0,0%,100,.02), hsla(0,0%,100,0) );
       background-clip: content-box;
@@ -71,14 +70,17 @@
       margin: 0 @tab-padding;
       border-bottom: @tab-border-size solid transparent;
       text-overflow: clip;
-      // To use a mask and keep sub-pixel AA: Also add an opaque bg + HWA layer
-      //-webkit-mask: linear-gradient( to left, hsla(0,0%,0%,0), hsla(0,0%,0%,1) 1em) no-repeat;
       background-color: @level-3-color;
       background-clip: content-box;
       backface-visibility: hidden;
     }
     &:hover .title {
       -webkit-mask-position: -@modified-icon-width 0;
+    }
+    &:hover,
+    &:hover .title {
+        background: @tab-background-color-hover;
+        transition: background @transition-time/3 ease;
     }
     &.active .title {
       background-color: @tab-background-color-active;
