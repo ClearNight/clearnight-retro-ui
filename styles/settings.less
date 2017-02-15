@@ -16,8 +16,8 @@
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
 		border-width: 0 1px 0 0;
-		border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
-		background: @level-2-color;
+		border-color: transparent;
+		background: transparent;
 
 		.btn {
 			white-space: initial;
@@ -29,7 +29,29 @@
 				vertical-align: middle;
 			}
 		}
+
+        .nav > li > a {
+            transition: color @transition-time ease;
+        }
+
+        .nav > li > a:hover {
+            background: lighten(@app-background-color, 4%);
+            transition: background @transition-time/3 ease;
+        }
+
+        .nav > li.active > a:hover {
+            background: @background-color-selected;
+        }
 	}
+
+    .breadcrumb {
+        .text(normal);
+        font-weight: 200;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: @text-color-info;
+    }
 
 	.nav {
 		& > li > a {
@@ -49,11 +71,28 @@
 		margin: @ui-padding*3 0;
 	}
 
-	.section,
-	.section:first-child,
-	.section:last-child {
+    .sub-section .row div {
+        background-color: transparent;
+    }
+
+	.section {
 		padding: @ui-padding*3;
+        background-color: transparent;
+
+        .section-heading {
+            .text(heading);
+            font-size: 24px;
+        }
+
+        .sub-section-heading {
+            .text(heading);
+            font-size: 16px;
+        }
 	}
+
+    .section:first-of-type {
+        border-top: 0;
+    }
 
 	.themes-panel .control-group {
 		margin-top: @ui-padding*2;
@@ -73,7 +112,16 @@
 	}
 	.package-card {
 		padding: @ui-padding;
-		background-color: @base-accent-color-light;
+        border: darken(@level-1-color, 10%);
+		background-color: transparent;
+
+        &:hover {
+            background: lighten(@app-background-color, 2%) !important;
+        }
+
+        .card-name {
+            .text(highlight);
+        }
 
 		.meta-controls .status-indicator {
 			width: @ui-padding/4;
@@ -81,8 +129,57 @@
 			&:before {
 				content: "\00a0"; // fixes 0 height
 			}
+
+            .install-button,
+            .uninstall-button {
+                &.is-installing,
+                &.is-uninstalling {
+
+                    &::before {
+                        -webkit-animation: spin 1s linear infinite;
+                        content: '\f087';
+                    }
+                }
+            }
+
+            .status-indicator {
+                width: @component-padding/2;
+            }
 		}
 	}
+
+    .package-detail .package-card:hover {
+        background-color: transparent;
+    }
+
+    .collapsed .package-container .row {
+        border: 0;
+    }
+
+    .package-update-view {
+        .thumbnail {
+            background-color: @tool-panel-background-color !important;
+        }
+
+        .package-status.icon-check {
+            color: @text-color-success;
+        }
+
+        .package-status.icon-cloud-download {
+            color: @text-color-info;
+        }
+    }
+
+    .package-readme {
+        font-size: 1em;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            .text(heading);
+        }
+    }
 	.icon::before {
 		color: @text-color-subtle;
 	}
@@ -105,4 +202,62 @@
 	.search-container .btn {
 		font-size: @ui-input-size;
 	}
+
+    .alert {
+        border: 0;
+
+        button.close {
+            background: transparent;
+            text-shadow: none;
+            border: 0 !important;
+            padding: 0 !important;
+            opacity: 1;
+
+            &:hover {
+                background: transparent;
+
+                &:before {
+                    color: @text-color-highlight;
+                }
+            }
+
+            &:before {
+                margin-right: 0;
+                transition: color @transition-time ease;
+            }
+        }
+    }
+
+    .alert-info {
+        color: @text-color-info;
+        background: mix(@text-color-info, @base-background-color, 32%);
+
+        button.close:before {
+            color: @text-color-info;
+        }
+    }
+
+    .alert-danger {
+        color: @text-color-error;
+        background: mix(@text-color-error, @base-background-color, 32%);
+
+        button.close:before {
+            color: @text-color-error;
+        }
+    }
+
+    .setting-title,
+    .setting-title.themes-label {
+        .text(normal);
+    }
+
+    label {
+        .text(normal);
+
+        &.control-label {
+            .theme-description {
+                min-height: 36px;
+            }
+        }
+    }
 }
