@@ -7,9 +7,14 @@ h3,
   line-height: 1em;
   margin-bottom: 15px
 }
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.2em; }
+h1,
+.h1 { font-size: 2em; }
+
+h2,
+.h2 { font-size: 1.5em; }
+
+h3,
+.h3 { font-size: 1.2em; }
 
 p {
   line-height: 1.6;
@@ -78,6 +83,16 @@ code {
     background-color: fadeout(@color, 50%);
   }
 }
+
+.highlight-type(@color) {
+  font-family: inherit !important;
+  padding-left: @component-padding/2;
+  padding-right: @component-padding/2;
+  color: @base-background-color !important;
+  border-radius: @component-border-radius;
+  background-color: @color;
+}
+
 .highlight-color(info, @background-color-info, @text-color-info);
 .highlight-color(warning, @background-color-warning, @text-color-warning);
 .highlight-color(error, @background-color-error, @text-color-error);
