@@ -5,6 +5,39 @@
     .text(normal);
   }
 
+  li .character-match {
+    .text(normal);
+    transition: color @transition-time/2 ease;
+  }
+
+  li:hover .character-match {
+    .text(highlight);
+    transition: color @transition-time/2 ease;
+  }
+
+  li.selected:before {
+    background: @background-color-selected;
+  }
+
+  li.selected .character-match {
+    .text(selected);
+    font-size: @font-size;
+  }
+
+  li.selected .word {
+    color: @text-color-selected !important;
+  }
+
+  li,
+  li.list-item {
+    transition: color @transition-time/2 ease;
+  }
+
+  li:hover,
+  li.list-item:hover {
+    .text(highlight);
+  }
+
   .generate-list-item-text-color(@class) {
     li:not(.list-nested-item).text-@{class},
     li.list-nested-item.text-@{class} > .list-item {
@@ -55,19 +88,22 @@
 &.select-list ol.list-group {
   li.two-lines {
     .secondary-line {
+        .text(subtle);
       color: @text-color-subtle;
     }
     &.selected .secondary-line {
+        .text(selected);
       color: fade(@text-color-highlight, 50%);
       text-shadow: none;
     }
   }
 
-  // We want to highlight the background of the list items because we dont
-  // know their size.
   li.selected {
     background-color: @background-color-selected;
     &:before{ display: none; }
+    pre {
+      border-color: @text-color-highlight;
+    }
   }
 
   &.mark-active {
@@ -115,6 +151,7 @@
 
   .list-group li {
     padding-left: @popover-list-padding;
+    transition: color @transition-time/2 ease;
   }
 }
 
@@ -123,7 +160,6 @@
     line-height: 2.5;
   }
 
-  // For sortable lists in the settings view
   li.ui-sortable-placeholder {
     visibility: visible !important;
     background-color: darken(@pane-item-background-color, 10%);
