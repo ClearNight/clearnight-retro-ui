@@ -25,7 +25,7 @@ atom-workspace {
 }
 
 
-// Scrollbars ------------------------------------
+// Scrollbars
 
 .scrollbars-visible-always {
 	/deep/ ::-webkit-scrollbar {
@@ -34,43 +34,49 @@ atom-workspace {
 	}
 
 	/deep/ ::-webkit-scrollbar-track {
-		background: @level-1-color;
+		background: transparent;
 	}
 
 	/deep/ ::-webkit-scrollbar-thumb {
 		border-radius: 5px;
-		border: 3px solid @level-1-color;
+		border: 3px solid transparent;
 		background: @scrollbar-color;
 		background-clip: content-box;
 	}
 
 	/deep/ ::-webkit-scrollbar-corner {
-		background: @level-1-color;
+		background: transparent;
 	}
 
 	/deep/ ::-webkit-scrollbar-thumb:vertical:active {
-		border-radius: 0;
+		border-radius: 5px;
 		border-left-width: 0;
 		border-right-width: 0;
 	}
 
 	/deep/ ::-webkit-scrollbar-thumb:horizontal:active {
-		border-radius: 0;
+		border-radius: 5px;
 		border-top-width: 0;
 		border-bottom-width: 0;
 	}
 
-	atom-text-editor {
+	atom-text-editor,
+	.settings-view {
 		/deep/ ::-webkit-scrollbar-track {
-			background: @level-1-color;
+			background: transparent;
 		}
 		/deep/ ::-webkit-scrollbar-corner {
-			background: @level-1-color;
+			background: transparent;
 		}
 		/deep/ ::-webkit-scrollbar-thumb {
-			border-color: @level-1-color;
+			border-color: @level-3-color;
 			background: @base-accent-color-light;
+
+			&:active {
+	        border: 1px solid @base-accent-color-light;
+			border-radius: 5px;
 		}
+      }
 	}
 }
 
@@ -78,5 +84,6 @@ atom-workspace {
 .caret {
   border-top: 5px solid #fff;
   margin-top: -1px;
-	color: #blah;
+  background: red;
+	color: red; // red might help find this bugger
 }
