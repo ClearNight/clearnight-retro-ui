@@ -54,8 +54,7 @@
     text-shadow: none;
     height: @input-height;
     line-height: @input-height;
-    border-radius: @component-border-radius;
-    border-color: @color;
+    border-color: transparent;
     border-width: 1px !important;
     border-style: solid !important;
     box-shadow: none !important;
@@ -100,7 +99,7 @@
 .button-variant(@color) {
     .button(@color);
     color: @color !important;
-    border-color: @color !important;
+    border-color: transparent !important;
     background: transparent;
 
     &:hover {

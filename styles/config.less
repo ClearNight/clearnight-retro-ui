@@ -32,8 +32,8 @@ html {
         atom-pane {
             padding-top: 0;
             padding-right: 0;
-            border-left: 1px solid @base-border-color;
-            border-bottom: 1px solid @base-border-color;
+            border-left: 1px solid transparent;
+            border-bottom: 1px solid transparent;
 
             .item-views {
                 border: none;
@@ -86,7 +86,7 @@ html {
     }
     // tree-view
     .tree-view-resizer[data-show-on-right-side="true"] {
-        border-left: 1px solid @base-border-color;
+        border-left: 2px solid transparent;
     }
 
     .tree-view::before {
