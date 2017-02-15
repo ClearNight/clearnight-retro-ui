@@ -1,6 +1,4 @@
-
 // Settings
-
 // Modular Scale (1.125): http://www.modularscale.com/?1&em&1.125&web&table
 @ms-6: @ui-size * 2.027;
 @ms-5: @ui-size * 1.802;
@@ -12,12 +10,7 @@
 @ms_1: @ui-size * 0.889;
 @ms_2: @ui-size * 0.790;
 
-
-
 .settings-view {
-
-	// Menu ------------------------------
-
 	.config-menu {
 		position: relative;
 		min-width: @ui-size * 15;
@@ -31,23 +24,19 @@
 			font-size: @ms_1;
 			line-height: 1;
 			padding: @ui-padding/3 @ui-padding/2;
+
 			&::before {
 				vertical-align: middle;
 			}
 		}
-
-
 	}
+
 	.nav {
 		& > li > a {
 			padding: @ui-padding/2 @ui-padding;
 			line-height: @ui-line-height;
 		}
 	}
-
-
-	// Sections ------------------------------
-
 	& > .panels {
 		background-color: @level-2-color;
 	}
@@ -55,6 +44,7 @@
 	.section-container {
 		max-width: @ui-size*60;
 	}
+
 	.sub-section {
 		margin: @ui-padding*3 0;
 	}
@@ -68,10 +58,6 @@
 	.themes-panel .control-group {
 		margin-top: @ui-padding*2;
 	}
-
-
-	// Titles ------------------------------
-
 	.section .section-heading {
 		margin-bottom: @ui-padding/1.5;
 		color: @text-color-selected;
@@ -81,29 +67,22 @@
 		color: @text-color-selected !important;
 	}
 
-	.sub-section-heading.icon:before,
-	.section-heading.icon:before {
+	.section-heading.icon:before,
+	.sub-section-heading.icon:before {
 		margin-right: @ui-padding-icon;
 	}
-
-
-
-	// Cards ------------------------------
-
 	.package-card {
 		padding: @ui-padding;
 		background-color: @base-accent-color-light;
+
 		.meta-controls .status-indicator {
 			width: @ui-padding/4;
+
 			&:before {
 				content: "\00a0"; // fixes 0 height
 			}
 		}
 	}
-
-
-	// Components ------------------------------
-
 	.icon::before {
 		color: @text-color-subtle;
 	}
@@ -120,11 +99,10 @@
 	}
 
 	.update-all-button {
-		font-size: .75em;
+		font-size: 0.75em;
 	}
 
 	.search-container .btn {
 		font-size: @ui-input-size;
 	}
-
 }

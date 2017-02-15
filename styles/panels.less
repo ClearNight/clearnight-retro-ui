@@ -1,29 +1,30 @@
 .panel {
-  &.bordered {
-    border: 1px solid @base-border-color;
-    border-radius: @component-border-radius;
-  }
+    &.bordered {
+        border: 1px solid @base-border-color;
+        border-radius: @component-border-radius;
+    }
 }
 
 atom-panel {
-  .text(normal);
-  position: relative;
-  background: @tool-panel-background-color;
+    .text(normal);
+    position: relative;
+    background: @tool-panel-background-color;
 
-  &.bottom {
-    background: @app-background-color;
-  }
-  &.bottom > *:not(:empty) {
-    background: @app-background-color;
-    padding-top: @component-padding/2;
-    z-index: 3;
-  }
+    &.bottom {
+        background: @app-background-color;
+    }
+
+    &.bottom > *:not(:empty) {
+        background: @app-background-color;
+        padding-top: @component-padding/2;
+        z-index: 3;
+    }
 }
 
-atom-pane-container atom-pane .item-views,
-.pane-item {
-  background: @app-background-color !important;
-  border: 0;
+.pane-item,
+atom-pane-container atom-pane .item-views {
+    background: @app-background-color !important;
+    border: 0;
 }
 
 atom-panel-container {
@@ -31,31 +32,28 @@ atom-panel-container {
 }
 
 .inset-panel {
-  position: relative;
-  background-color: @inset-panel-background-color;
-  border-radius: @component-border-radius;
-  &.bordered {
-    border: 1px solid @base-border-color;
+    position: relative;
+    background-color: @inset-panel-background-color;
     border-radius: @component-border-radius;
-  }
-  & .panel-heading {
-    border-color: @inset-panel-border-color;
-  }
+
+    &.bordered {
+        border: 1px solid @base-border-color;
+        border-radius: @component-border-radius;
+    }
+
+    & .panel-heading {
+        border-color: @inset-panel-border-color;
+    }
 }
 
 .panel-heading {
-  .text(normal);
-  border-bottom: 1px solid @panel-heading-border-color;
-  background-color: @panel-heading-background-color;
+    .text(normal);
+    border-bottom: 1px solid @panel-heading-border-color;
+    background-color: @panel-heading-background-color;
 
-  .btn {
-    padding-left: 8px;
-    padding-right: 8px;
-    .btn-default(
-      lighten(@button-background-color, 10%),
-      lighten(@button-background-color-hover, 10%),
-      lighten(@button-background-color-selected, 10%),
-      lighten(@text-color, 10%)
-    );
-  }
+    .btn {
+        padding-left: 8px;
+        padding-right: 8px;
+        .btn-default( lighten(@button-background-color, 10%), lighten(@button-background-color-hover, 10%), lighten(@button-background-color-selected, 10%), lighten(@text-color, 10%) );
+    }
 }
