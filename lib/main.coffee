@@ -12,7 +12,7 @@ module.exports =
     unsetFontSize()
     unsetLayoutMode()
 
-# Font Size -----------------------
+# Font Size
 setFontSize = (currentFontSize) ->
   if Number.isInteger(currentFontSize)
     root.style.fontSize = "#{currentFontSize}px"
@@ -22,7 +22,7 @@ setFontSize = (currentFontSize) ->
 unsetFontSize = ->
   root.style.fontSize = ''
 
-# Layout Mode -----------------------
+# Layout Mode
 setLayoutMode = (layoutMode) ->
   root.setAttribute('theme-clear-night-ui-layoutmode', layoutMode.toLowerCase())
 
