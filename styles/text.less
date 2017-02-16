@@ -1,76 +1,126 @@
+.h1,
+.h2,
+.h3,
 h1,
 h2,
 h3 {
-  line-height: 1em;
-  margin-bottom: 15px
+    line-height: 1em;
+    margin-bottom: 15px;
 }
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.2em; }
+
+.h1,
+h1 {
+    font-size: 2em;
+}
+
+.h2,
+h2 {
+    font-size: 1.5em;
+}
+
+.h3,
+h3 {
+    font-size: 1.2em;
+}
 
 p {
-  line-height: 1.6;
-  margin-bottom: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 label {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 pre {
-  box-shadow: none;
-  color: @text-color;
-  background: @inset-panel-background-color;
-  border-radius: @component-border-radius;
-  border: none;
-  margin: 0;
+    box-shadow: none;
+    color: @text-color;
+    background: @inset-panel-background-color;
+    border-radius: @component-border-radius;
+    border-color: transparent;
+    margin: 0;
 }
 
 code {
-  .text(highlight);
-  background: @background-color-highlight;
-  border-radius: @component-border-radius;
+    .text(highlight);
+    padding: 2px 4px;
+    font-size: 90%;
+    background: @background-color-highlight;
+    color: darken(@text-color-info, 10%);
+    border-radius: @component-border-radius;
 }
 
-.selected { .text(highlight); }
+.selected {
+    .text(highlight);
+}
 
-.text-smaller { font-size: 0.9em; }
+.text-smaller {
+    font-size: 0.9em;
+}
 
-.text-subtle { .text(subtle); }
-.text-highlight { .text(highlight); }
+.text-subtle {
+    .text(subtle);
+}
 
-.text-error { .text(error); }
+.text-highlight {
+    .text(highlight);
+}
+
+.text-error {
+    .text(error);
+}
+
 .text-info {
-  .text(info);
-  &:hover { color: @text-color-info; }
+    .text(info);
+
+    &:hover {
+        color: @text-color-info;
+    }
 }
+
 .text-warning {
-  .text(warning);
-  &:hover { color: @text-color-warning; }
+    .text(warning);
+
+    &:hover {
+        color: @text-color-warning;
+    }
 }
+
 .text-success {
-  .text(success);
-  &:hover { color: @text-color-success; }
+    .text(success);
+
+    &:hover {
+        color: @text-color-success;
+    }
 }
 
 .highlight-mixin {
-  padding: 1px 4px;
-  font-weight: bold;
-  text-shadow: none;
-  border-radius: @component-border-radius;
-  color: @text-color-highlight;
+    padding: 1px 4px;
+    font-weight: bold;
+    text-shadow: none;
+    border-radius: @component-border-radius;
+    color: @text-color-highlight;
 }
 
 .highlight {
-  .highlight-mixin();
-  background-color: @background-color-highlight;
+    .highlight-mixin();
+    background-color: @background-color-highlight;
 }
 
 .highlight-color(@name, @color, @text-color) {
-  .highlight-@{name} {
-    .highlight-mixin();
-    background-color: fadeout(@color, 50%);
-  }
+    .highlight-@{name} {
+        .highlight-mixin();
+        background-color: fadeout(@color, 50%);
+    }
+}
+
+.highlight-type(@color) {
+    font-family: inherit !important;
+    padding-left: @component-padding/2;
+    padding-right: @component-padding/2;
+    color: @base-background-color !important;
+    border-radius: @component-border-radius;
+    background-color: @color;
 }
 .highlight-color(info, @background-color-info, @text-color-info);
 .highlight-color(warning, @background-color-warning, @text-color-warning);
@@ -78,5 +128,5 @@ code {
 .highlight-color(success, @background-color-success, @text-color-success);
 
 .results-view .path-details.list-item {
-  color: darken(@text-color-highlight, 18%);
+    color: darken(@text-color-highlight, 18%);
 }

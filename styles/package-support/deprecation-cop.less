@@ -1,0 +1,34 @@
+/*
+Support for Deprecation Cop (https://atom.io/packages/deprecation-cop)
+*/
+.deprecation-cop {
+    .deprecation-overview {
+        background-color: @level-2-color;
+        border-bottom: 1px solid @base-border-color;
+    }
+
+    .list-item {
+        padding-top: @component-padding/2;
+        padding-bottom: @component-padding/2;
+
+        &:before {
+            transition: all @transition-time ease;
+            opacity: 0;
+        }
+
+        &:hover {
+            background-color: transparent !important;
+
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    .stack-trace {
+        color: @text-color-info;
+        border-radius: @component-border-radius;
+        margin-right: @component-padding;
+        margin-top: @component-padding;
+    }
+}

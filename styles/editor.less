@@ -1,51 +1,54 @@
 atom-text-editor[mini] {
-  line-height: @component-line-height;
-  max-height: @component-line-height + 2; // +2 for borders
-  overflow: auto;
+    line-height: @component-line-height;
+    max-height: @component-line-height + 2; // +2 for borders
+    overflow: auto;
 }
 
 atom-text-editor[mini] {
-  font-size: @ui-input-size;
-  line-height: @ui-line-height;
-  max-height: none;
-  padding-left: @ui-padding/3;
-  border-radius: @component-border-radius;
-  color: @text-color-highlight;
-  border: 1px solid @input-border-color;
-  background-color: @input-background-color;
+    font-size: @ui-input-size;
+    line-height: @ui-line-height;
+    max-height: none;
+    padding-left: @ui-padding/3;
+    border-radius: @component-border-radius;
+    color: @text-color-highlight;
+    border: 1px solid transparent;
+    background-color: @input-background-color;
 
-  &,
-  &.editor {
-    .placeholder-text {
-      color: @text-color-subtle;
-    }
-    .selection .region {
-      background-color: @input-selection-color;
-    }
-    .cursor {
-      border-color: @base-accent-color;
-      border-width: 2px;
-    }
-  }
+    &,
+    &.editor {
+        .placeholder-text {
+            color: @text-color-subtle;
+        }
 
-  &.is-focused,
-  &.is-focused.editor {
-    .focus();
-    background-color: @input-background-color-focus;
-    .selection .region {
-      background-color: @input-selection-color-focus;
+        .selection .region {
+            background-color: @input-selection-color;
+        }
+
+        .cursor {
+            border-color: @base-accent-color;
+            border-width: 2px;
+        }
     }
-  }
+
+    &.is-focused,
+    &.is-focused.editor {
+        .focus();
+        background-color: @input-background-color-focus;
+
+        .selection .region {
+            background-color: @input-selection-color-focus;
+        }
+    }
 }
 
 .gutter {
-  background-color: @level-2-color !important;
+    background-color: transparent;
 
-  .cursor-line {
-   background-color: @base-accent-color-light !important;
- }
+    .cursor-line {
+        background-color: @base-accent-color-light !important;
+    }
 }
 
 .wrap-guide {
-  background-color: @base-accent-color-light !important;
+    background-color: darken(@base-accent-color, 34%) !important;
 }

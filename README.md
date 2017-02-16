@@ -1,4 +1,4 @@
-<p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2686_md.png" alt="Clear Night UI" /></p>
+<p align="center"><img src="assets/img/clear-night-ui-title.png" alt="Clear Night UI" /></p>
 
 A soothing dark theme for the Atom text editor. Designed to work with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax), but integrates nicely with other syntax themes.
 

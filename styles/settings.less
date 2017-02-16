@@ -1,6 +1,4 @@
-
 // Settings
-
 // Modular Scale (1.125): http://www.modularscale.com/?1&em&1.125&web&table
 @ms-6: @ui-size * 2.027;
 @ms-5: @ui-size * 1.802;
@@ -12,42 +10,101 @@
 @ms_1: @ui-size * 0.889;
 @ms_2: @ui-size * 0.790;
 
-
-
 .settings-view {
-
-	// Menu ------------------------------
-
-	.config-menu {
+    .config-menu {
 		position: relative;
 		min-width: @ui-size * 15;
 		max-width: @ui-size * 20;
 		border-width: 0 1px 0 0;
-		border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
-		background: @level-2-color;
+		border-color: transparent;
+		background: transparent;
 
 		.btn {
 			white-space: initial;
 			font-size: @ms_1;
 			line-height: 1;
 			padding: @ui-padding/3 @ui-padding/2;
+
 			&::before {
 				vertical-align: middle;
 			}
 		}
 
+        .nav > li:before {
+                opacity: 0;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                width: 30em;
+                height: 30em;
+                background-color: transparent;
+                transition: transform 250ms @md-timing-function;
+        }
 
+        .nav > li > a {
+            transition: color @transition-time ease;
+            padding: 0 1em;
+            line-height: 4em;
+            background: none;
+        }
+
+        .nav > li > a:hover {
+            background: lighten(@app-background-color, 4%);
+            transition: background @transition-time/3 ease;
+        }
+
+        .nav > li.active > a:hover {
+            background: @background-color-selected;
+        }
 	}
+
+    .table {
+        background: lighten(@app-background-color, 5%);
+        border-radius: 0.125em;
+        margin: 3em 0;
+
+        > thead, tbody {
+            > tr {
+                border: none;
+
+                > th, > td {
+                    border-bottom: 1px solid fade(@text-color, 5%);
+                }
+                > th {
+                    height: 3.5em;
+                    line-height: 3.5em;
+                    padding: 0 1.5em;
+                    font-size: 0.75em;
+                    font-weight: 600;
+                    color: lighten(@text-color, 15%);
+                }
+                > td {
+                    border-top: none;
+                    height: 3em;
+                    line-height: 3em;
+                    padding: 0 1.5em;
+                }
+            }
+        }
+    }
+
+    .breadcrumb {
+        .text(normal);
+        font-weight: 200;
+		padding: 1em 1em 1em;
+        margin-bottom: 0;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: @text-color-info;
+    }
+
 	.nav {
 		& > li > a {
 			padding: @ui-padding/2 @ui-padding;
 			line-height: @ui-line-height;
 		}
 	}
-
-
-	// Sections ------------------------------
-
 	& > .panels {
 		background-color: @level-2-color;
 	}
@@ -55,25 +112,155 @@
 	.section-container {
 		max-width: @ui-size*60;
 	}
+
 	.sub-section {
 		margin: @ui-padding*3 0;
 	}
 
-	.section,
-	.section:first-child,
-	.section:last-child {
+    .sub-section .row div {
+        background-color: transparent;
+    }
+
+	.section {
 		padding: @ui-padding*3;
+        background-color: transparent;
+
+        .section-heading {
+            .text(heading);
+            font-size: 24px;
+        }
+
+        .sub-section-heading {
+            .text(heading);
+            font-size: 16px;
+        }
 	}
+
+    .section:not(:empty) {
+        + .section {
+            border-top: none;
+        }
+
+        .section-heading {
+            font-weight: 300;
+            margin-bottom: 2.5em;
+
+            &::before {
+                position: relative;
+                top: -0.25em;
+            }
+            + .text {
+                margin-bottom: 2em;
+            }
+        }
+        .sub-section-heading {
+            font-size: 1.25em;
+            margin: 0 0 1.5em;
+            font-weight: 500;
+
+            &::before {
+                font-size: 1.25em;
+                margin-right: 1em;
+            }
+        }
+        .text, .setting-description {
+            font-size: 1.1em;
+            line-height: 1.25em;
+            font-weight: 500;
+
+            &.setting-title {
+                font-size: 1.4em;
+                margin-bottom: 0.4em;
+            }
+            .icon:not(:first-child)::before {
+                margin: 0 0.25em;
+            }
+            small {
+                display: inline-block;
+                padding: 0.25em 0.5em;
+                background: @text-color;
+                color: @app-background-color;
+                line-height: 1em;
+                border-radius: 0.125em;
+                vertical-align: middle;
+                text-transform: uppercase;
+                margin: 0.125em;
+            }
+        }
+    }
+
+    .section:first-of-type {
+        border-top: 0;
+    }
+
+	.section, .sub-section {
+        padding: 1em;
+        margin: 1.5em;
+
+        &:first-child {
+            border-top: none;
+        }
+        &:first-child, &:last-child {
+            padding: 0;
+        }
+        &.collapsed {
+            > *:not([class*="heading"]) {
+                display: none;
+            }
+        }
+        &:empty {
+            display: none;
+
+            + .section, + .sub-section {
+                padding-top: 0;
+            }
+        }
+        + .section, + .sub-section {
+            padding-top: 3em;
+        }
+    }
 
 	.themes-panel .control-group {
-		margin-top: @ui-padding*2;
+        .themes-picker {
+            margin: 1em -1em 0;
+        }
+        .themes-picker-item {
+            margin: 1em 0;
+            padding: 0 1em;
+
+            .setting-description {
+                min-height: 3em;
+            }
+        }
+        .btn {
+            position: relative;
+            box-shadow: none;
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1;
+            text-align: center;
+            padding: 1em;
+            margin: 0 0 0 0.5em;
+            top: 0.5em;
+            border-radius: 50%;
+
+            &::before {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                vertical-align: middle;
+                position: absolute;
+                top: 0.5em;
+                left: 0.6em;
+            }
+            &:focus, &:active {
+                background: fade(@text-color, 10%);
+            }
+        }
 	}
-
-
-	// Titles ------------------------------
-
 	.section .section-heading {
-		margin-bottom: @ui-padding/1.5;
+        padding-top: 2em;
+        padding-left: 0.5em;
 		color: @text-color-selected;
 	}
 
@@ -81,29 +268,83 @@
 		color: @text-color-selected !important;
 	}
 
-	.sub-section-heading.icon:before,
-	.section-heading.icon:before {
+	.section-heading.icon:before,
+	.sub-section-heading.icon:before {
 		margin-right: @ui-padding-icon;
 	}
-
-
-
-	// Cards ------------------------------
-
 	.package-card {
 		padding: @ui-padding;
-		background-color: @base-accent-color-light;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+		background-color: transparent;
+
+        &:hover {
+            background: lighten(@app-background-color, 3%) !important;
+        }
+
+        .card-name {
+            .text(highlight);
+        }
+
 		.meta-controls .status-indicator {
 			width: @ui-padding/4;
+
 			&:before {
 				content: "\00a0"; // fixes 0 height
 			}
+
+            .install-button,
+            .uninstall-button {
+                &.is-installing,
+                &.is-uninstalling {
+
+                    &::before {
+                        -webkit-animation: spin 1s linear infinite;
+                        content: '\f087';
+                    }
+                }
+            }
+
+            .status-indicator {
+                width: @component-padding/2;
+                background-color: @base-accent-color !important;
+            }
 		}
 	}
 
+    .package-detail .package-card:hover {
+        background-color: transparent;
+    }
 
-	// Components ------------------------------
+    .collapsed .package-container .row {
+        border: 0;
+    }
 
+    .package-update-view {
+        .thumbnail {
+            background-color: @tool-panel-background-color !important;
+        }
+
+        .package-status.icon-check {
+            color: @text-color-success;
+        }
+
+        .package-status.icon-cloud-download {
+            color: @text-color-info;
+        }
+    }
+
+    .package-readme {
+        font-size: 1em;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            .text(heading);
+        }
+    }
 	.icon::before {
 		color: @text-color-subtle;
 	}
@@ -120,11 +361,172 @@
 	}
 
 	.update-all-button {
-		font-size: .75em;
+		font-size: 0.75em;
 	}
 
 	.search-container .btn {
 		font-size: @ui-input-size;
 	}
 
+    .alert {
+        border: 0;
+
+        button.close {
+            background: transparent;
+            text-shadow: none;
+            border: 0 !important;
+            padding: 0 !important;
+            opacity: 1;
+
+            &:hover {
+                background: transparent;
+
+                &:before {
+                    color: @text-color-highlight;
+                }
+            }
+
+            &:before {
+                margin-right: 0;
+                transition: color @transition-time ease;
+            }
+        }
+    }
+
+    .alert-info {
+        color: @text-color-info;
+        background: mix(@text-color-info, @base-background-color, 32%);
+
+        button.close:before {
+            color: @text-color-info;
+        }
+    }
+
+    .alert-danger {
+        color: @text-color-error;
+        background: mix(@text-color-error, @base-background-color, 32%);
+
+        button.close:before {
+            color: @text-color-error;
+        }
+    }
+
+    .setting-title,
+    .setting-title.themes-label {
+        .text(normal);
+    }
+
+    label {
+        .text(normal);
+
+        &.control-label {
+            .theme-description {
+                min-height: 36px;
+            }
+        }
+    }
+}
+
+.settings-view, [class*="nuclide"] {
+    select.form-control {
+        -webkit-appearance: none;
+        background-size: 1.5em;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: right center;
+        box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+        padding: 0;
+        line-height: 3em;
+        height: 3em;
+        padding: 0;
+        color: @text-color;
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        .select-arrow(@app-background-color);
+
+        &:hover {
+            .select-arrow(@app-background-color);
+            background-color: transparent;
+            box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+        }
+        &:focus, &:active {
+            .select-arrow(@app-background-color);
+            background-color: transparent;
+            border-color: @base-accent-color;
+        }
+        option {
+            background: @app-background-color;
+            color: @text-color;
+            border: 1px solid fade(@text-color, 20%);
+        }
+    }
+    .radio, .checkbox {
+        padding-left: 5em;
+
+        .setting-description {
+            margin-top: 0.5em;
+        }
+    }
+    input[type="checkbox"], input[type="radio"] {
+        position: relative;
+        left: -1em;
+        border: 0.125em solid @base-accent-color;
+        background: none;
+
+        &:checked {
+            background: @base-accent-color;
+
+            &::before, &::after {
+                border: 0.1em solid @text-color-selected;
+                background-color: @text-color-selected;
+                transition: none;
+            }
+            &::after {
+                transform: rotate(-45deg) scale(1) translate(-0.025em, -0.2em);
+            }
+            &::before {
+                transform: rotate(225deg) scale(1) translate(0.175em, -0.025em);
+            }
+        }
+        &:focus {
+            box-shadow: 0 0 1em fade(@base-accent-color, 30%);
+        }
+    }
+    input[type="color"] {
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        border: none;
+    }
+}
+
+.select-arrow(@color) when (lightness(@color) > 50%) {
+    background-image: url('atom://clear-night-ui/assets/svg/arrow-drop-down.svg');
+}
+.select-arrow(@color) when (lightness(@color) < 50%) {
+    background-image: url('atom://clear-night-ui/assets/svg/arrow-drop-down-white.svg');
+}
+.panel-contrast .settings-view {
+    .config-menu {
+        background: darken(@app-background-color, 1.25%);
+    }
+}
+.panel-shadows .settings-view {
+    .config-menu {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.25em;
+            height: 100%;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 10000;
+        }
+    }
 }
