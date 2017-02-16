@@ -28,7 +28,7 @@ Switch between 3 Layout Modes:
 *   Compact - In compact mode the UI stays compact to leave more space for the editor.
 *   Spacious - Expand the UI with spacious mode to give the editor some breathing room.
 
-## Preview
+## Preview (not yet updated for release 1.3)
 
 <p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2696_md.png" alt="Preview image" /></p>
 
