@@ -41,14 +41,18 @@ atom-text-editor[mini] {
     }
 }
 
-.gutter {
-    background-color: @level-3-color !important; // TODO consolidate this with syntax .gutter style
+.gutter-container {
+    border-left: 1px solid black;
 
-    .cursor-line {
-        background-color: @base-accent-color-light !important;
+    .gutter {
+        background-color: @level-3-color !important; // TODO consolidate this with syntax .gutter style
+
+        .cursor-line {
+            background-color: @base-accent-color-light !important;
+        }
     }
-}
 
-.wrap-guide {
-    background-color: darken(@base-accent-color, 32%) !important;
+    .wrap-guide {
+        background-color: darken(@base-accent-color, 32%) !important;
+    }
 }
