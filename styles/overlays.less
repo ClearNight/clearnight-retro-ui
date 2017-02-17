@@ -34,18 +34,18 @@ atom-panel.modal {
         height: auto;
         max-height: none;
         background-color: transparent;
-        margin: 0 -@component-padding*2;
-        padding: 0 @component-padding*2 @component-padding @component-padding*4;
-        border: 0;
-        border-radius: 0;
-        border-bottom: 1px solid transparent;
+        margin: @component-padding/10 -@component-padding*2;
+        padding: @component-padding @component-padding @component-padding @component-padding;
+        border: 1px solid transparent;
+        border-radius: @component-border-radius;
+
+        &::before{
+
+        }
 
         &.is-focused:hover,
         &:hover {
-            border-top: 0 !important;
-            border-left: 0 !important;
-            border-right: 0 !important;
-            border-bottom: 1px solid transparent !important;
+            border: 1px solid black;
             background-color: transparent !important;
         }
     }
@@ -109,7 +109,7 @@ atom-panel.modal {
         padding-right: @component-padding;
         -webkit-font-smoothing: antialiased;
         content: "\f011";
-        margin-left: -@component-padding*2;
+        margin-left: @component-padding;
     }
 
     & > .command-palette > atom-text-editor[mini]:before {
