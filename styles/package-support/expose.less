@@ -8,20 +8,24 @@ atom-panel.modal.overlay.from-top.expose-panel {
 .expose-top {
   height: @component-line-height*3;
 
-  a {
-    &.icon-gear,
-    &.icon-x {
-      color: @base-border-color;
+  .btn-group {
+      padding-top: 0.8em;
+  }
+
+ .icon-gear,
+ .icon-x {
+      color: @text-color-subtle;
       transition: all @transition-time ease;
+      width: @component-icon-size*3;
+      text-align: left;
 
       &:before {
-        font-size: @component-icon-size !important;
+        font-size: @component-icon-size*2 !important;
       }
 
       &:hover {
         color: @text-color;
       }
-    }
   }
 
   .editor--private {
