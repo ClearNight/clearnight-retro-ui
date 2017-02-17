@@ -110,6 +110,7 @@
 
 	.section-container {
 		max-width: @ui-size*60;
+        margin-left: 3em;
 	}
 
 	.sub-section {
@@ -143,6 +144,8 @@
         .section-heading {
             font-weight: 300;
             margin-bottom: 2.5em;
+            padding-top: 1em;
+    		color: @text-color-selected;
 
             &::before {
                 position: relative;
@@ -156,6 +159,7 @@
             font-size: 1.25em;
             margin: 0 0 1.5em;
             font-weight: 500;
+            color: @text-color-selected !important;
 
             &::before {
                 font-size: 1.25em;
@@ -256,15 +260,6 @@
                 background: fade(@text-color, 10%);
             }
         }
-	}
-	.section .section-heading {
-        padding-top: 2em;
-        padding-left: 0.5em;
-		color: @text-color-selected;
-	}
-
-	.sub-section-heading {
-		color: @text-color-selected !important;
 	}
 
 	.section-heading.icon:before,
