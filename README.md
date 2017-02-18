@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/img/clear-night-ui-title.png" alt="Clear Night UI" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/raindeer44/clear-night-ui/master/assets/img/clear-night-ui-title.png" alt="Clear Night UI" /></p>
 
 A soothing dark theme for the Atom text editor. Designed to work with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax), but integrates nicely with other syntax themes.
 
@@ -6,19 +6,19 @@ Clear Night was inspired by [Glacier Dark UI](https://github.com/berlouz/glacier
 
 ## Preview
 
-<p align="center"><img src="assets/img/preview.png" alt="Preview image" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/raindeer44/clear-night-ui/master/assets/img/preview.png" alt="Preview image" /></p>
 
 <br />
 
 <p align="center">Floating overlays</p>
 
-<p align="center"><img src="assets/img/preview-overlay.png" alt="Preview modal overlays" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/raindeer44/clear-night-ui/master/assets/img/preview-overlay.png" alt="Preview modal overlays" /></p>
 
 <br />
 
 <p align="center">Smooth settings view</p>
 
-<p align="center"><img src="assets/img/preview-settings-view.png" alt="Preview settings view" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/raindeer44/clear-night-ui/master/assets/img/preview-settings-view.png" alt="Preview settings view" /></p>
 
 > Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax) and [Minimap](https://atom.io/packages/minimap).
 
