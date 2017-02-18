@@ -28,11 +28,23 @@ Switch between 3 Layout Modes:
 *   Compact - In compact mode the UI stays compact to leave more space for the editor.
 *   Spacious - Expand the UI with spacious mode to give the editor some breathing room.
 
-## Preview (not yet updated for release 1.3)
+## Preview
 
-<p align="center"><img src="https://imgoat.com/thumb/ccbc87e4b5/2696_md.png" alt="Preview image" /></p>
+<p align="center"><img src="assets/img/preview.png" alt="Preview image" /></p>
 
-Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax) and [Minimap](https://atom.io/packages/minimap).
+<br />
+
+<p align="center">Floating overlays</p>
+
+<p align="center"><img src="assets/img/preview-overlay.png" alt="Preview modal overlays" /></p>
+
+<br />
+
+<p align="center">Smooth settings view</p>
+
+<p align="center"><img src="assets/img/preview-settings-view.png" alt="Preview settings view" /></p>
+
+> Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax) and [Minimap](https://atom.io/packages/minimap).
 
 ### Contribution
 Please report issues/bugs, feature requests and suggestions for improvements to the [issue tracker](https://github.com/raindeer44/clear-night-ui/issues).
