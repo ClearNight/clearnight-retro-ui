@@ -12,71 +12,69 @@ atom-workspace {
 	atom-panel-container.left:empty {
 		padding-left: @ui-padding-pane;
 	}
-
 }
 
 .platform-darwin {
 	atom-workspace.theme-one-light-ui {
-	  border-top: 1px solid darken(@base-border-color, 20%);
+		border-top: 1px solid darken(@base-border-color, 20%);
 	}
+
 	&.is-blurred atom-workspace.theme-one-light-ui {
-	  border-top-color: @base-border-color;
+		border-top-color: @base-border-color;
 	}
 }
-
-
-// Scrollbars ------------------------------------
-
+// Scrollbars
 .scrollbars-visible-always {
-	/deep/ ::-webkit-scrollbar {
+	/deep/::-webkit-scrollbar {
 		width: 10px;
 		height: 10px;
 	}
 
-	/deep/ ::-webkit-scrollbar-track {
-		background: @level-1-color;
+	/deep/::-webkit-scrollbar-track {
+		background: transparent;
 	}
 
-	/deep/ ::-webkit-scrollbar-thumb {
+	/deep/::-webkit-scrollbar-thumb {
 		border-radius: 5px;
-		border: 3px solid @level-1-color;
+		border: 3px solid transparent;
 		background: @scrollbar-color;
 		background-clip: content-box;
 	}
 
-	/deep/ ::-webkit-scrollbar-corner {
-		background: @level-1-color;
+	/deep/::-webkit-scrollbar-corner {
+		background: transparent;
 	}
 
-	/deep/ ::-webkit-scrollbar-thumb:vertical:active {
-		border-radius: 0;
+	/deep/::-webkit-scrollbar-thumb:vertical:active {
+		border-radius: 5px;
 		border-left-width: 0;
 		border-right-width: 0;
 	}
 
-	/deep/ ::-webkit-scrollbar-thumb:horizontal:active {
-		border-radius: 0;
+	/deep/::-webkit-scrollbar-thumb:horizontal:active {
+		border-radius: 5px;
 		border-top-width: 0;
 		border-bottom-width: 0;
 	}
 
+	.settings-view,
 	atom-text-editor {
-		/deep/ ::-webkit-scrollbar-track {
-			background: @level-1-color;
+		/deep/::-webkit-scrollbar-track {
+			background: transparent;
 		}
-		/deep/ ::-webkit-scrollbar-corner {
-			background: @level-1-color;
+
+		/deep/::-webkit-scrollbar-corner {
+			background: transparent;
 		}
-		/deep/ ::-webkit-scrollbar-thumb {
-			border-color: @level-1-color;
+
+		/deep/::-webkit-scrollbar-thumb {
+			border-color: @level-3-color;
 			background: @base-accent-color-light;
+
+			&:active {
+				border: 1px solid @base-accent-color-light;
+				border-radius: 5px;
+			}
 		}
 	}
-}
-
-// TODO: Move to a better place, not sure where it gets used id:13
-.caret {
-  border-top: 5px solid #fff;
-  margin-top: -1px;
-	color: #blah;
 }

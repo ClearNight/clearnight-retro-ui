@@ -1,0 +1,15 @@
+.title-bar {
+    background: @app-background-color;
+    border-bottom: none;
+    color: white;
+
+    .panel-contrast & {
+        background: darken(@app-background-color, 2%);
+    }
+    .tinted-tab-bar & {
+        background: @level-1-color;
+    }
+    .panel-contrast.tinted-tab-bar & {
+        background: darken(@level-1-color, 5%);
+    }
+}
