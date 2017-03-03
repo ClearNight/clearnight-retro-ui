@@ -19,6 +19,7 @@
 ![Screenshots and GIFs which follow reproduction steps to demonstrate the problem](url)
 
 **Atom version:** [Enter Atom version here]
+
 **OS and version:** [Enter OS name and version here]
 
 **Installed packages:**
