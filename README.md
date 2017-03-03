@@ -52,7 +52,4 @@ Please report issues/bugs, feature requests and suggestions for improvements to 
 
 ---
 
-
-<p align="center"><a href="https://github.com/raindeer44/clear-night-ui/LICENSE">Copyright &copy; 2017 Jade Thornton</a></p>
-
-<p align="center"><a href="https://github.com/raindeer44/clear-night-ui/LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square" alt="License: MIT" /></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/Raindeer44/clear-night-ui/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square" alt="License: MIT" /></a></p>
