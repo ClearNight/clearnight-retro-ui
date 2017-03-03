@@ -35,4 +35,4 @@ Before opening an issue please search through the existing ones, *even closed on
 
 ### Template for submitting bug reports
 
-See [ISSUE_TEMPLATE.md](https://github.com/raindeer44/clear-nigclear-night-ui/ISSUE_TEMPLATE.md) for the template.
+See [ISSUE_TEMPLATE.md](https://github.com/Raindeer44/clear-night-ui/blob/master/ISSUE_TEMPLATE.md) for the template.
