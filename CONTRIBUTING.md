@@ -22,8 +22,6 @@ Also, you should ignore changes to the file `custom.less` as those are your pers
 git update-index --assume-unchanged styles/custom.less
 ```
 
-We'll have to deal with it this way until the maintainer of `less-cache` merges [this pull request](https://github.com/atom/less-cache/pull/8) and then we could use optional imports in LESS.
-
 I recommend installing the package [editorconfig](https://atom.io/packages/editorconfig) so you don't have to change your global settings for indentation.
 
 ### Reporting a bug
