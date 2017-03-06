@@ -75,6 +75,7 @@
                     padding: 0 1.5em;
                     font-size: 0.75em;
                     font-weight: 600;
+                    white-space: normal !important;
                     color: lighten(@text-color, 15%);
                 }
                 > td {
@@ -82,6 +83,7 @@
                     height: 3em;
                     line-height: 3em;
                     padding: 0 1.5em;
+                    white-space: normal !important;
                 }
             }
         }
@@ -106,11 +108,18 @@
 	}
 	& > .panels {
 		background-color: @level-2-color;
+
+    .panels-item {
+
+    }
 	}
+
+  .settings-panel {
+    padding: 40px !important;
+  }
 
 	.section-container {
 		max-width: @ui-size*60;
-        margin-left: 3em;
 	}
 
 	.sub-section {
@@ -122,7 +131,7 @@
     }
 
 	.section {
-		padding: @ui-padding*3;
+		padding: 40px !important;
         background-color: transparent;
 
         .section-heading {
@@ -198,7 +207,7 @@
 
 	.section, .sub-section {
         padding: 1em;
-        margin: 1.5em;
+        margin: 1.5em 0;
 
         &:first-child {
             border-top: none;
@@ -457,7 +466,7 @@
         }
     }
     .radio, .checkbox {
-        margin-left: -1.95em;
+        padding-left: 2.5em;
 
         .setting-description {
             margin-top: 0.5em;
@@ -465,7 +474,6 @@
     }
     input[type="checkbox"], input[type="radio"] {
         position: relative;
-        left: -1em;
         border: 0.125em solid @base-accent-color;
         background: none;
 

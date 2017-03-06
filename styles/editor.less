@@ -39,6 +39,10 @@ atom-text-editor[mini] {
     }
 }
 
+atom-text-editor .wrap-guide {
+  background-color: @base-accent-color-light !important;
+}
+
 .gutter-container {
     border-left: 1px solid black;
 
@@ -48,9 +52,5 @@ atom-text-editor[mini] {
         .cursor-line {
             background-color: @base-accent-color-light !important;
         }
-    }
-
-    .wrap-guide {
-        background-color: darken(@base-accent-color, 32%) !important;
     }
 }
