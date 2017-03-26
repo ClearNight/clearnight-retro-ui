@@ -4,8 +4,7 @@
   "version": "1.3.3",
   "description": "Atom Clear Night dark UI theme",
   "author": {
-    "name": "Jade Thornton",
-    "email": "jade@jmthornton.net"
+    "name": "Northern Spiral"
   },
   "license": "MIT",
   "main": "lib/main",
@@ -16,10 +15,10 @@
     "night",
     "blue"
   ],
-  "homepage": "https://github.com/raindeer44/clear-night-ui",
-  "repository": "https://github.com/raindeer44/clear-night-ui",
+  "homepage": "https://github.com/northernspiral/clear-night-ui",
+  "repository": "https://github.com/northernspiral/clear-night-ui",
   "bugs": {
-    "url": "https://github.com/raindeer44/clear-night-ui/issues"
+    "url": "https://github.com/northernspiral/clear-night-ui/issues"
   },
   "engines": {
     "atom": ">=1.13.0 <2.0.0"
