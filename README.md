@@ -1,7 +1,5 @@
 <p align="center"><img src="https://raw.githubusercontent.com/ClearNight/clear-night-ui/master/assets/img/clear-night-ui-title.png" alt="Clear Night UI" /></p>
 
-[![MIT License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Raindeer44/clear-night-ui/master/LICENSE)
-
 A soothing dark theme for the Atom text editor. Designed to work with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax), but integrates nicely with other syntax themes.
 
 Clear Night was inspired by [Glacier Dark UI](https://github.com/berlouz/glacier-dark-ui) and [Nord UI](https://github.com/arcticicestudio/nord-atom-ui).
@@ -53,4 +51,5 @@ Please report issues/bugs, feature requests and suggestions for improvements to 
 
 ---
 
-[Copyright 2017 (c) Jade Thornton](https://raw.githubusercontent.com/ClearNight/clear-night-ui/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Raindeer44/clear-night-ui/master/LICENSE)
+
