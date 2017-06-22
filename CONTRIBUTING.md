@@ -28,6 +28,7 @@ I recommend installing the package [editorconfig](https://atom.io/packages/edito
 
 Before opening an issue please search through the existing ones, *even closed ones*. Also, please take these into account before submitting an issue:
 
+- **Are you using the latest version of Clear Night UI?** Use `apm upgrade clear-night-ui`.
 - **Which version of Atom are you using?** You can get the exact version by running `atom -v` in your terminal, or by starting Atom and running the Application: About command from the Command Palette.
 - **What's the name and version of the OS you're using?**
 - **Which packages do you have installed?** You can get that list by running `apm list --installed` in a terminal.
@@ -35,4 +36,4 @@ Before opening an issue please search through the existing ones, *even closed on
 
 ### Template for submitting bug reports
 
-See [ISSUE_TEMPLATE.md](https://github.com/Raindeer44/clear-night-ui/blob/master/ISSUE_TEMPLATE.md) for the template.
+See [ISSUE_TEMPLATE.md](https://github.com/ClearNight/clear-night-ui/blob/master/ISSUE_TEMPLATE.md) for the template.
