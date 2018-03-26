@@ -483,13 +483,12 @@
             &::before, &::after {
                 border: 0.1em solid @text-color-selected;
                 background-color: @text-color-selected;
-                transition: none;
             }
             &::after {
                 transform: rotate(-45deg) scale(1) translate(-0.025em, -0.2em);
             }
             &::before {
-                transform: rotate(225deg) scale(1) translate(0.175em, -0.025em);
+                margin-top: -0.069em;
             }
         }
         &:focus {
