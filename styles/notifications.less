@@ -1,57 +1,57 @@
 atom-notifications {
-    .text(normal);
-    top: 32px;
-    background-color: transparent;
+  .text(normal);
+  top: 32px;
+  background-color: transparent;
 
-    .close {
-        transition: all @transition-time ease;
+  .close {
+    transition: all @transition-time ease;
 
-        &:before {
-            color: @text-color;
-        }
-    }
-
-    .btn {
-        height: 24px !important;
-        line-height: 20px !important;
-
-        &.close-all {
-            .button-variant(@text-color-info);
-        }
-    }
-
-    atom-notification {
-        border: 1px solid black;
-        border-radius: @component-border-radius;
-    }
-
-    .content,
-    .detail,
-    .message,
-    .meta {
+    &:before {
         color: @text-color;
-        background-color: @overlay-background-color;
-        background-clip: inherit;
+    }
+  }
 
-        .detail-content,
-        code {
-            background-color: @overlay-border-color;
-            color: @text-color;
-        }
+  .btn {
+    height: 24px !important;
+    line-height: 20px !important;
 
-        .stack-toggle {
-            color: @text-color-info;
-        }
+    &.close-all {
+        .button-variant(@text-color-info);
+    }
+  }
+
+  atom-notification {
+    border: 1px solid black;
+    border-radius: @component-border-radius;
+  }
+
+  .content,
+  .detail,
+  .message,
+  .meta {
+    color: @text-color;
+    background-color: @overlay-background-color;
+    background-clip: inherit;
+
+    .detail-content,
+    code {
+        background-color: @overlay-border-color;
+        color: @text-color;
     }
 
-    .meta {
-        .description a {
-            color: @text-color-info;
-        }
-
-        .btn-toolbar .icon-clippy {
-            color: @text-color;
-            padding-left: 5px;
-        }
+    .stack-toggle {
+        color: @text-color-info;
     }
+  }
+
+  .meta {
+    .description a {
+      color: @text-color-info;
+    }
+
+    .btn-toolbar .icon-clippy {
+      color: @text-color;
+      padding-left: 5px;
+    }
+  }
 }
