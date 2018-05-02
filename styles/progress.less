@@ -21,8 +21,6 @@
         height: inherit;
         border-radius: 1em;
         border: 2px solid;
-        -webkit-animation: spinner-animation @spinner-duration infinite;
-        -webkit-animation-fill-mode: backwards;
         animation: spinner-animation @spinner-duration infinite;
         animation-fill-mode: backwards;
     }
@@ -33,7 +31,6 @@
 
     &::after {
         border-color: transparent lighten(@base-accent-color, 15%) transparent transparent;
-        -webkit-animation-delay: @spinner-duration/2;
         animation-delay: @spinner-duration/2;
     }
 
@@ -41,31 +38,16 @@
         display: inline-block;
     }
 }
-@-webkit-keyframes spinner-animation {
-    0% {
-        transform: rotateZ( 0deg);
-        -webkit-animation-timing-function: cubic-bezier(0, 0, .8, .2);
-    }
-
-    50% {
-        transform: rotateZ(180deg);
-        -webkit-animation-timing-function: cubic-bezier(.2, .8, 1, 1);
-    }
-
-    100% {
-        transform: rotateZ(360deg);
-    }
-}
 
 @keyframes spinner-animation {
     0% {
         transform: rotateZ( 0deg);
-        -webkit-animation-timing-function: cubic-bezier(0, 0, .8, .2);
+        animation-timing-function: cubic-bezier(0, 0, .8, .2);
     }
 
     50% {
         transform: rotateZ(180deg);
-        -webkit-animation-timing-function: cubic-bezier(.2, .8, 1, 1);
+        animation-timing-function: cubic-bezier(.2, .8, 1, 1);
     }
 
     100% {
@@ -116,13 +98,7 @@ progress {
     &:indeterminate {
         background-image: linear-gradient(-45deg, transparent 33%, @progress-buffer-color 33%, @progress-buffer-color 66%, transparent 66%);
         background-size: 25px @progress-height, 100% 100%, 100% 100%;
-        -webkit-animation: progress-buffering 5s linear 6; // stop animation after 6 runs (30s) to limit CPU usage
         animation: progress-buffering 5s linear 6; // stop animation after 6 runs (30s) to limit CPU usage
-    }
-}
-@-webkit-keyframes progress-buffering {
-    100% {
-        background-position: -100px 0;
     }
 }
 @keyframes progress-buffering {
