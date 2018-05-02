@@ -1,36 +1,29 @@
-@import "syntax-variables";
+@import './colors';
 
-@ui-theme-name: clear-night-ui;
-
-// Main colors
-@ui-fg: hsl(@ui-hue, min(@ui-saturation, 18%), max(@ui-lightness*3, 88%) );
-@ui-bg: #0e151b; // normalized @syntax-background-color
-@ui-border: hsl(@ui-hue, @ui-saturation, @ui-lightness-border);
+// Base
+@base-background-color: @bg1;
+@base-border-color: @bg2;
+@base-accent-color: @cyan;
+@base-accent-color-light: lighten(@level-1-color, 15%);
 
 // Animation
 @transition-time: 400ms;
 @md-timing-function: cubic-bezier(.4, 0, .2, 1);
 
 // Background
-@background-color-info: #2481C3;
-@background-color-success: #499549;
-@background-color-warning: #d7503c;
-@background-color-error: #AC4E4E;
+@background-color-info: @cyan;
+@background-color-success: @green;
+@background-color-warning: @yellow;
+@background-color-error: @red;
 @background-color-highlight: lighten(@base-background-color, 4%);
 @background-color-selected: lighten(@base-background-color, 8%);
 @app-background-color: @level-3-color;
-@level-1-color: #0b2033;
+@level-1-color: @bg2;
 @level-2-color: @base-background-color;
-@level-3-color: #0b1017;
+@level-3-color: @bg1;
 
 // Badges
 @badge-background-color: lighten(@background-color-highlight, 6%);
-
-// Base
-@base-background-color: @ui-bg;
-@base-border-color: @ui-border;
-@base-accent-color: #2481C3;
-@base-accent-color-light: lighten(@level-1-color, 15%);
 
 // Buttons
 @button-background-color: @level-3-color;
@@ -101,11 +94,11 @@
 @scrollbar-background-color-editor: @ui-syntax-color;
 
 // Site Colors
-@ui-site-color-1: #268bd2;
-@ui-site-color-2: #2aa198;
-@ui-site-color-3: #db7f3d;
-@ui-site-color-4: #834ea3;
-@ui-site-color-5: #dec453;
+@ui-site-color-1: @cyan;
+@ui-site-color-2: @teal;
+@ui-site-color-3: @orange;
+@ui-site-color-4: @magenta;
+@ui-site-color-5: @yellow;
 
 // Sizes
 @font-size: 12px;
@@ -146,14 +139,14 @@
 @tab-background-color-editor: @ui-syntax-color;
 
 // Text
-@text-color: @ui-fg;
+@text-color: @fg1;
 @text-color-subtle: fadeout(@text-color, 40%);
 @text-color-highlight: lighten(@text-color, 20%);
-@text-color-selected: #e2e0ec;
-@text-color-info: #377098;
-@text-color-success: #499549;
-@text-color-warning: #cbb149;
-@text-color-error: #AC4E4E;
+@text-color-selected: @fg2;
+@text-color-info: @blue;
+@text-color-success: @green;
+@text-color-warning: @yellow;
+@text-color-error: @red;
 @text-color-faded: fade(@text-color, 20%);
 @text-color-added: @text-color-success;
 @text-color-ignored: @text-color-subtle;
