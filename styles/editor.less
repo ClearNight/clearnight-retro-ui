@@ -1,42 +1,42 @@
 atom-text-editor[mini] {
-    font-size: @ui-input-size;
-    line-height: @ui-line-height;
-    max-height: none;
-    padding-left: @ui-padding/3;
-    border-radius: @component-border-radius;
-    color: @text-color-highlight;
-    border: 1px solid transparent;
-    background-color: @input-background-color;
-    overflow: auto;
+  font-size: @ui-input-size;
+  line-height: @ui-line-height;
+  max-height: none;
+  padding-left: @ui-padding/3;
+  border-radius: @component-border-radius;
+  color: @text-color-highlight;
+  border: 1px solid transparent;
+  background-color: @input-background-color;
+  overflow: auto;
 
-    &,
-    &.editor {
-        background-color: @input-background-color-focus !important;
-        border-radius: @component-border-radius !important;
+  &,
+  &.editor {
+    background-color: @input-background-color-focus !important;
+    border-radius: @component-border-radius !important;
 
-        .placeholder-text {
-            color: @text-color-subtle;
-        }
-
-        .selection .region {
-            background-color: @input-selection-color;
-        }
-
-        .cursor {
-            border-color: @base-accent-color !important;
-            border-width: 2px;
-        }
+    .placeholder-text {
+      color: @text-color-subtle;
     }
 
-    &.is-focused,
-    &.is-focused.editor {
-        .focus();
-        background-color: @input-background-color-focus;
-
-        .selection .region {
-            background-color: @input-selection-color-focus;
-        }
+    .selection .region {
+      background-color: @input-selection-color;
     }
+
+    .cursor {
+      border-color: @base-accent-color !important;
+      border-width: 2px;
+    }
+  }
+
+  &.is-focused,
+  &.is-focused.editor {
+    .focus();
+    background-color: @input-background-color-focus;
+
+    .selection .region {
+      background-color: @input-selection-color-focus;
+    }
+  }
 }
 
 atom-text-editor .wrap-guide {
@@ -44,13 +44,13 @@ atom-text-editor .wrap-guide {
 }
 
 .gutter-container {
-    border-left: 1px solid black;
+  border-left: 1px solid @base5;
 
-    .gutter {
-        background-color: @level-3-color;
+  .gutter {
+    background-color: @level-3-color;
 
-        .cursor-line {
-            background-color: @base-accent-color-light !important;
-        }
+    .cursor-line {
+      background-color: @base-accent-color-light !important;
     }
+  }
 }
