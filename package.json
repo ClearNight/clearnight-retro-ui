@@ -1,8 +1,8 @@
 {
-  "name": "clear-night-ui",
+  "name": "clearnight-retro-ui",
   "theme": "ui",
-  "version": "1.4.1",
-  "description": "Atom Clear Night dark UI theme",
+  "version": "0.8.0",
+  "description": "Clear Night retro dark UI theme",
   "author": {
     "name": "ClearNight"
   },
@@ -10,15 +10,16 @@
   "main": "lib/main",
   "keywords": [
     "dark",
+    "gruvbox",
+    "retro",
     "adaptive",
     "ui",
-    "night",
-    "blue"
+    "night"
   ],
-  "homepage": "https://github.com/ClearNight/clear-night-ui",
-  "repository": "https://github.com/ClearNight/clear-night-ui",
+  "homepage": "https://github.com/ClearNight/clearnight-retro-ui",
+  "repository": "https://github.com/ClearNight/clearnight-retro-ui",
   "bugs": {
-    "url": "https://github.com/ClearNight/clear-night-ui/issues"
+    "url": "https://github.com/ClearNight/clearnight-retro-ui/issues"
   },
   "engines": {
     "atom": ">=1.13.0 <2.0.0"
