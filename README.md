@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/ClearNight/clearnight-retro-ui/master/assets/img/clearnight-retro-ui-title.png" alt="Clear Night UI" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/ClearNight/clearnight-retro-ui/master/assets/img/clearnight-retro-ui-title.png" alt="ClearNight Retro UI" /></p>
 
 [![apm install clearnight-retro-ui](https://apm-badges.herokuapp.com/apm/clearnight-retro-ui.svg?theme=one-dark)](https://atom.io/packages/clearnight-retro-ui)
 
@@ -20,7 +20,7 @@ A smooth, relaxed retro dark theme for Atom. Designed to work with [ClearNight R
 
 <p align="center"><img src="https://raw.githubusercontent.com/ClearNight/clearnight-retro-ui/master/assets/img/preview-settings-view.png" alt="Preview settings view" /></p>
 
-> Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [Clear Night Syntax](https://atom.io/packages/clear-night-syntax) and [Minimap](https://atom.io/packages/minimap).
+> Icons provided by [File Icons](https://atom.io/packages/file-icons), shown with [ClearNight Retro Syntax](https://atom.io/packages/clearnight-retro-syntax) and [Minimap](https://atom.io/packages/minimap).
 
 ## Getting started
 ### Installation
