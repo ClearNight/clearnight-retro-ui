@@ -2,10 +2,10 @@ root = document.documentElement
 
 module.exports =
   activate: (state) ->
-    atom.config.observe 'clear-night-ui.fontSize', (value) ->
+    atom.config.observe 'clearnight-retro-ui.fontSize', (value) ->
       setFontSize(value)
 
-    atom.config.observe 'clear-night-ui.layoutMode', (value) ->
+    atom.config.observe 'clearnight-retro-ui.layoutMode', (value) ->
       setLayoutMode(value)
 
   deactivate: ->
@@ -24,7 +24,7 @@ unsetFontSize = ->
 
 # Layout Mode
 setLayoutMode = (layoutMode) ->
-  root.setAttribute('theme-clear-night-ui-layoutmode', layoutMode.toLowerCase())
+  root.setAttribute('theme-clearnight-retro-ui-layoutmode', layoutMode.toLowerCase())
 
 unsetLayoutMode = ->
-  root.removeAttribute('theme-clear-night-ui-layoutmode')
+  root.removeAttribute('theme-clearnight-retro-ui-layoutmode')
